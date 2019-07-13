@@ -1,0 +1,31 @@
+.container
+  %header
+    .row
+      .col-sm-6
+        %h1 今日の筋トレメニュー
+      .col-sm-6.align-right
+        = link_to root_path do
+          = fa_icon 'arrow-left', class: "icon"
+  .container
+%hr
+.container
+  = form_with(model: @task, local: true) do |f|
+    .row
+      .form-group
+        -# = f.text_field :content, class: 'form-control col-sm-8 margin-bottom', placeholder: "メニューを入力しよう"
+        .btn.col-sm-2.botan
+          = link_to '追加', new_task_path
+    .row
+      - @tasks.each do |task|
+        .container
+          %strong.align-text-bottom.col-sm-6.task_content
+            = task.content
+          .btn.col-sm-2.botan.float-right
+            = link_to '編集', edit_task_path(task)
+          .btn.col-sm-2.botan.float-right
+            = link_to '削除', task_path(task), method: :delete
+        %hr
+        .row
+%hr
+%footer
+
