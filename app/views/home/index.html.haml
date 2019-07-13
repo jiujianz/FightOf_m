@@ -1,0 +1,31 @@
+#intro.slide.story{"data-slide" => "1"}
+  .container
+    #home-row-1.row.clearfix
+      .col-12
+        %h1.font-semibold
+          Fight of M
+        %h4.font-thin
+          自分の
+          %span.font-semibold 目標を
+          達成しろ
+        %br/
+        %br/
+      / /col-12
+    / /row
+    #home-row-2.row.clearfix
+      .col-12.col-sm-4
+        %a.smoothscroll.navigation-slide-a{:href => "#portfolio"}
+          .home-hover.navigation-slide
+            %img{:src => "img/s02.png"}/
+          %span PROFESSIONAL
+      .col-12.col-sm-4
+        %a.smoothscroll.navigation-slide-a{:href => "#process"}
+          .home-hover.navigation-slide
+            %img{:src => "img/s01.png"}/
+          %span 今日の筋トレ
+          = link_to "Training To Do",tasks_path
+      .col-12.col-sm-4
+        %a.smoothscroll.navigation-slide-a{:href => "#clients"}
+          .home-hover.navigation-slide
+            %img{:src => "img/s03.png"}/
+          %span SUITABLE
