@@ -1,0 +1,13 @@
+.container
+  %header
+    .row
+      .col-sm-6
+        %h1 トレ-ニングメニューの追加
+    = form_with(model: @task, local: true) do |f|
+      .row
+        .form-group 
+          = f.text_field :content, class: 'form-control margin-bottom', placeholder: "メニューを入力しよう"
+        .form-group
+        = f.submit '追加', class: 'col-sm-2 form__submit'
+        .btn.col-sm-2.botan
+          = link_to "戻る", tasks_path
