@@ -24,9 +24,10 @@
           .home-hover.navigation-slide
             %img{:src => "img/s01.png"}/
           %span 今日の筋トレ
-          = link_to "Training To Do",tasks_path
+          = link_to "Training To Do", tasks_path
       .col-12.col-sm-4
         %a.smoothscroll.navigation-slide-a{:href => "#clients"}
           .home-hover.navigation-slide
             %img{:src => "img/s03.png"}/
-          %span SUITABLE
+          %span 近くのジムを探そう
+          = link_to "Find your GYM", maps_path
