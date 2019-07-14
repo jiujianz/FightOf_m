@@ -1,4 +1,4 @@
-header{
+.topmenu{
   margin-top: 30px;
   color: darkcyan;
   h1{
@@ -8,6 +8,10 @@ header{
   hr{
     border-width: 3px;
     border-color: darkcyan;
+  }
+
+  .head_menu{
+    color: darkcyan;
   }
 
 .align-right{
@@ -35,12 +39,16 @@ a{
   height: 40px;
   width: 98px;
   border-radius: 40px;
+  font-size: 18px;
 }
 
 .form__submit{
   margin-right: 10px;
   font-size: 23px;
   border-radius: 10px;
+  background-color: darkcyan;
+  color: white;
+  font-weight: bold;
 }
 
 .task_content{
