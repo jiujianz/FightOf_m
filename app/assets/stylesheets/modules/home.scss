@@ -1,0 +1,127 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: normal;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.slide{
+  background-color: #2f2f2f;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #process .content-row h2 {
+    min-height: 6em;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: rgba( 0, 0, 0, .8);
+  }
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+.slide {
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-bottom: 65px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#intro {
+  background-image: url('../img/bg1.jpg');
+  color: #ffffff;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  background-attachment: relative;
+  background-position: center center;
+}
+
+#intro h1 {
+  padding-top: 130px;
+}
+
+@media (max-width: 991px) {
+  #intro {
+    background-position: -70% 0, 170% 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #intro {
+    background-image: none;
+  }
+}
+
+#home-row-1, #home-row-2 {
+  padding-top: 25px;
+}
+
+#home-row-1 h1 {
+  font-size: 54px;
+}
+
+#home-row-1 h4 {
+  font-size: 32px;
+}
+
+#home-row-2 {
+  font-size: 25px;
+}
+
+#home-row-2 .col-12 {
+  height: 232px;
+  padding-top: 30px;
+}
+
+#home-row-2 .col-12 .home-hover {
+  height: 166px;
+  overflow: hidden;
+  padding-top: 26px;
+  transition: all ease-in .5s;
+}
+
+#home-row-2 .col-12 .home-hover:hover {
+  height: 166px;
+  padding-top: 0;
+}
+
+@media (max-width: 767px) {
+  #home-row-1, #home-row-2 {
+    padding-top: 16px;
+  }
+  #home-row-1 h1 {
+    font-size: 35px;
+  }
+  #home-row-1 h4 {
+    font-size: 21px;
+  }
+  #home-row-2 {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,25 @@
+%body
+  %header.col-xs-12.text-center.head_message
+    %h1.center-block Proud of Muscle
+    .container
+      .row
+        .messages
+          = render @message_all
+  %footer.message_form.col-xs-12
+    .container.message_block
+      .row
+        = form_with(model: @message, local: true) do |f|
+          .row
+            .back_icon.col-xs-1
+              = link_to root_path do
+                = fa_icon 'arrow-left', class: "back_icon"
+            = f.text_field :content, class: 'col-xs-9 input_message', placeholder: "type a message"
+            .col-xs-1.form_icon
+              = f.label :image, class: 'form__mask image_icon' do
+                = fa_icon 'image', class: 'icon'
+                = f.file_field :image, class: 'shadow-icon'
+              = f.label :video, class: 'form__mask video_icon' do
+                = fa_icon 'film', class: 'icon'
+                = f.file_field :video, accept: 'video/*', class: 'shadow-icon'
+            = f.submit 'Submit', class: 'chat__submit col-xs-1'
+    

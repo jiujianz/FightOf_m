@@ -1,0 +1,69 @@
+.head_message{
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+  background-color: darkcyan;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.message_form{
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  background-color: cadetblue;
+}
+
+.message_block{
+  margin-bottom: 30px;
+}
+
+.input_message{
+  height: 65px;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+.form_icon{
+  position: fixed;
+  bottom: 19px;
+  left: 896px;
+}
+
+.image_icon{
+  width: 0;
+  right: 130px;
+  top: 43px;
+  cursor: pointer;
+}
+
+.video_icon{
+  position: fixed;
+  width: 0;
+  right: 470px;
+  bottom: 21px;
+  cursor: pointer;
+}
+
+.shadow-icon{
+  visibility: hidden;
+}
+
+.chat__submit{
+  position: fixed;
+  right: 235px;
+  bottom: 27px;
+  background-color: darkcyan;
+  color: white;
+  font-size: 20px;
+  height: 67px;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+.back_icon{
+  font-size: 50px;
+  position: fixed;
+  bottom: 38px;
+  left: 50px;
+}

@@ -72,3 +72,6 @@ gem 'haml-rails'
 gem "font-awesome-rails"
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'streamio-ffmpeg'
