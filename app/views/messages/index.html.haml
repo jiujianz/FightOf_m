@@ -13,7 +13,7 @@
             .back_icon.col-xs-1
               = link_to root_path do
                 = fa_icon 'arrow-left', class: "back_icon"
-            = f.text_field :content, class: 'col-xs-9 input_message', placeholder: "type a message"
+            = f.text_field :content, class: 'col-xs-9 input_message', placeholder: "type a message", required: ""
             .col-xs-1.form_icon
               = f.label :image, class: 'form__mask image_icon' do
                 = fa_icon 'image', class: 'icon'
