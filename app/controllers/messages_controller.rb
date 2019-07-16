@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
 
   def index
     @message = Message.new
-    @message_all = Message.all
+    @message_all = Message.all.order("created_at DESC")
     respond_to do |format|
 			format.html
       format.json{ @new_message = Message.where('id > ?', params[:id]) }
