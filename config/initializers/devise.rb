@@ -10,6 +10,11 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '09bf11cdbb31022f403fa9d30026ad8911035fdaf011ab4c890882074356faaadb852b611b48ecaaaaa2814cd8ce5cb9b803f851036d569cc26cb2528f459ae5'
 
+  config.omniauth :facebook, ENV['APP_ID'], ENV['FACEBOOK_SECRET'], scope: 'email', info_fields: 'email', callback_url: "#{ENV['HOST']}/users/auth/facebook/callback"
+  config.omniauth :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET'], scope: 'email', oauth_callback: "#{ENV['HOST']}/users/auth/twitter/callback"
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], scope: 'email', redirect_uri: "#{ENV['HOST']}/users/auth/google_oauth2/callback"
+  OmniAuth.config.logger = Rails.logger if Rails.env.development? # debug用
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
