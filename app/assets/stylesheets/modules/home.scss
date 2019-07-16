@@ -10,6 +10,16 @@ body {
   -webkit-font-smoothing: antialiased !important;
 }
 
+.home_bar{
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.dropdown-menu{
+  min-height: 40px;
+}
+
 .slide{
   background-color: #2f2f2f;
   height: 100vh;

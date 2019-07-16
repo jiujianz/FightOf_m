@@ -3,10 +3,20 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @message_all = Message.all
+    respond_to do |format|
+			format.html
+      format.json{ @new_message = Message.where('id > ?', params[:id]) }
+    end
   end
 
   def create
     @message = Message.create(message_params)
+    if @message.save
+      respond_to do |format|
+        format.html { redirect_to messages_path(@group)  }
+        format.json
+      end
+    end
   end
 
   private
