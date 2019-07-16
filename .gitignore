@@ -27,3 +27,11 @@
 /config/master.key
 /public/uploads
 app/views/layouts/application.html.haml
+config/certs/localhost.key
+.env
+config/certs/localhost.cert
+rand.dat
+server.crt
+server.csr
+server.key
+server_key.pem
