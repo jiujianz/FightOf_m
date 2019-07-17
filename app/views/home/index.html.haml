@@ -1,6 +1,6 @@
 #navigation.navbar-fixed-top
   .container
-    .dropdown
+    .dropdown.float-right
       .navigation_list.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
         = fa_icon "bars", class: "home_bar"
         %span.caret
@@ -19,24 +19,28 @@
           達成しろ
         %br/
         %br/
-      / /col-12
-    / /row
     #home-row-2.row.clearfix
       .col-12.col-sm-4
-        %a.smoothscroll.navigation-slide-a{:href => "#portfolio"}
+        .smoothscroll.navigation-slide-a
           .home-hover.navigation-slide
-            %img{:src => "img/s02.png"}/
-          %span 筋肉の自慢をして下さい
-          = link_to "Communication", messages_path
+            = link_to "", messages_path
+            .home-icon
+              = fa_icon 'users', class: "home_icon_link"
+          %span Communication
+          -# %span 筋肉の自慢をして下さい
       .col-12.col-sm-4
-        %a.smoothscroll.navigation-slide-a{:href => "#process"}
+        .smoothscroll.navigation-slide-a
           .home-hover.navigation-slide
-            %img{:src => "img/s01.png"}/
-          %span 今日の筋トレ
-          = link_to "Training To Do", tasks_path
+            = link_to "", tasks_path
+            .home-icon
+              = fa_icon 'check-circle', class: "home_icon_link"
+        %span Training To Do
+        -# %span 今日の筋トレ
       .col-12.col-sm-4
-        %a.smoothscroll.navigation-slide-a{:href => "#clients"}
+        .smoothscroll.navigation-slide-a
           .home-hover.navigation-slide
-            %img{:src => "img/s03.png"}/
-          %span 近くのジムを探そう
-          = link_to "Find your GYM", maps_path
+            = link_to "", maps_path
+            .home-icon
+              = fa_icon 'search', class: "home_icon_link"
+        %span Find your GYM
+        -# %span 近くのジムを探そう

@@ -25,45 +25,43 @@
 }
 
 .form_icon{
-  position: fixed;
-  bottom: 19px;
-  left: 896px;
+  display: flex;
 }
 
 .image_icon{
-  width: 0;
-  right: 130px;
-  top: 43px;
   cursor: pointer;
+  width: 0;
+  position: relative;
+  top: 42px;
+  right: 125px;
 }
 
 .video_icon{
-  position: fixed;
-  width: 0;
-  right: 470px;
-  bottom: 21px;
   cursor: pointer;
+  width: 0;
+  position: relative;
+  top: 41px;
+  right: 67px
 }
 
 .shadow-icon{
   visibility: hidden;
+  width: 0;
 }
 
 .chat__submit{
-  position: fixed;
-  right: 235px;
-  bottom: 27px;
   background-color: darkcyan;
   color: white;
-  font-size: 20px;
   height: 67px;
   font-weight: bold;
   border-radius: 25px;
+  position: relative;
+  top: 27px;
 }
 
 .back_icon{
   font-size: 50px;
-  position: fixed;
-  bottom: 38px;
-  left: 50px;
+  position: relative;
+  top: 10px;
+  left: -5px;
 }

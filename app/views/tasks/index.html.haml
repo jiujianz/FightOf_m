@@ -1,11 +1,12 @@
 .container
   %header.topmenu
     .row
-      .col-sm-6
-        %h1 今日の筋トレメニュー
-      .col-sm-6.align-right.head_menu
-        = link_to root_path do
-          = fa_icon 'arrow-left', class: "icon"
+      .col-sm-12o
+        .col-sm-6.ffset-xs-4
+          %h1 今日の筋トレメニュー
+        .col-sm-2.head_menu.float-right
+          = link_to root_path do
+            = fa_icon 'arrow-left', class: "icon"
   .container
 %hr
 .container

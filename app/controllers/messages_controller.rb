@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
     @message = Message.create(message_params)
     if @message.save
       respond_to do |format|
-        format.html { redirect_to messages_path(@group)  }
+        format.html { redirect_to messages_path  }
         format.json
       end
     end
