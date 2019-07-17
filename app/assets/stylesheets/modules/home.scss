@@ -1,9 +1,25 @@
+.font-thin {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+}
+
+.font-semibold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+}
+
+.font-light {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+}
+
 html, body {
   height: 100%;
   width: 100%;
 }
 
 body {
+  background-color: white;
   font-family: "Titillium Web", sans-serif;
   font-weight: normal;
   overflow-x: hidden;
@@ -20,29 +36,16 @@ body {
   min-height: 40px;
 }
 
-.slide{
-  background-color: #2f2f2f;
-  height: 100vh;
-}
-
-:focus {
-  outline: none;
-}
-
-::-moz-focus-inner {
-  border: 0;
-}
-
 .slide {
+  background-color: #2f2f2f;
   background-position: center center;
   background-repeat: no-repeat;
-  padding-bottom: 65px;
+  padding-bottom: 110px;
   padding-top: 50px;
   text-align: center;
 }
 
 #intro {
-  background-image: url('../img/bg1.jpg');
   color: #ffffff;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -119,4 +122,13 @@ body {
   #home-row-2 {
     font-size: 16px;
   }
+}
+
+.home_icon_link{
+  color: white;
+  font-size: 70px;
+}
+
+#home-row-2 span{
+  color: white
 }
