@@ -3,7 +3,7 @@
     .row
       .col-sm-12o
         .col-sm-6.ffset-xs-4
-          %h1 今日の筋トレメニュー
+          %h1 Today's Training Menu
         .col-sm-2.head_menu.float-right
           = link_to root_path do
             = fa_icon 'arrow-left', class: "icon"
@@ -16,17 +16,45 @@
         -# = f.text_field :content, class: 'form-control col-sm-8 margin-bottom', placeholder: "メニューを入力しよう"
         .btn.col-sm-2.botan
           = link_to '追加', new_task_path
-    .row
-      - @tasks.each do |task|
-        .container
-          %strong.align-text-bottom.col-sm-6.task_content
-            = task.content
-          .btn.col-sm-2.botan.float-right
-            = link_to '編集', edit_task_path(task)
-          .btn.col-sm-2.botan.float-right
-            = link_to '削除', task_path(task), method: :delete
-        %hr
-        .row
+      .container
+        .col-md-6.col-md-offset-3.col-sm-6.text-center
+          - @tasks.each do |task|
+            .index-wrapper
+              - if task.completed?
+                .row.item
+                  .col-md-8.col-sm-2
+                    %h2.item-title{:style => "opacity: 0.5;"}
+                      %strike= link_to task.content, task
+                    %p.item-sub-title.item-desc{:style => "opacity: 0.5;"}= task.description
+                    %p.time-created-at.item-sub-title{:style => "opacity: 0.5;"}
+                      Completed #{time_ago_in_words(task.completed_at)} ago
+                  .col-md-2.col-xs-2
+                    %p
+                      = link_to complete_task_path(task), method: :patch do
+                        = fa_icon 'check', class:"task_icon"
+                  .col-md-2.col-xs-2
+                    %p
+                      = link_to task, method: :delete do
+                        = fa_icon 'trash', class:"task_icon"
+              - else
+                .row.item
+                  .col-md-6.col-sm-6.text-center
+                    %h2.item-title= task.content
+                    %p.item-sub-title.item-desc= task.description
+                    %p.time-created-at.item-sub-title{:style => "opacity: 0.5;"}
+                      Created #{time_ago_in_words(task.created_at)} ago
+                  .col-md-2.col-xs-2
+                    %p
+                      = link_to complete_task_path(task), method: :patch do
+                        = fa_icon 'check', class:"task_icon"
+                  .col-md-2.col-xs-2
+                    %p
+                      = link_to task, method: :delete do
+                        = fa_icon 'trash', class:"task_icon"
+                  .col-md-2.col-xs-2
+                    %p
+                      = link_to edit_task_path(task) do
+                        = fa_icon 'edit', class:"task_icon"
 %hr
-%footer
 
+%footer
