@@ -5,8 +5,11 @@
         %h1 トレ-ニングメニューの追加
     = form_with(model: @task, local: true) do |f|
       .row
-        .form-group 
-          = f.text_field :content, class: 'form-control margin-bottom', placeholder: "メニューを入力しよう"
+        .form-group.task_form 
+          = f.label "メニュー"
+          = f.text_field :content, class: 'form-control margin-bottom', placeholder: "メニューを入力しよう", required: ""  
+          = f.label "内容"
+          = f.text_area :description, class: 'form-control margin-bottom description_from', placeholder: "内容を入力しよう", required: ""
         .form-group
         = f.submit '追加', class: 'col-sm-2 form__submit'
         .btn.col-sm-2.botan
