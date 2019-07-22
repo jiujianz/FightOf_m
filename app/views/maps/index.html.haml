@@ -1,7 +1,16 @@
+%div{:style => "display: none"}
+  %input#pac-input.controls{:placeholder => "Enter a location", :type => "text"}/
 #map
-.head_map_message Find your GYM
-.container
-  .row
-    .back_icon.col-xs-4
-      = link_to root_path do
-        = fa_icon 'arrow-left', class: "map_back_icon"
+#infowindow-content
+  %span#place-name.title
+  %br/
+  = succeed ":" do
+    %strong Place ID
+  %span#place-id
+  %br/
+  %span#place-address
+.back_icon.col-xs-4
+  = link_to root_path do
+    = fa_icon 'arrow-left', class: "map_back_icon"
+
+-# .head_map_message Find your GYM

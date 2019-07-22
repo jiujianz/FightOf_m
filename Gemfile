@@ -72,5 +72,3 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem "mini_magick", ">= 4.9.4"
-gem 'streamio-ffmpeg'
-gem 'simple_form', '~> 4.1'
