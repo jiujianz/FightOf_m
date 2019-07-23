@@ -6,6 +6,7 @@
     = form_with(model: @task, local: true) do |f|
       .row
         .form-group.task_form 
+          = render 'shared/error_task_message'
           = f.label "メニュー"
           = f.text_field :content, class: 'form-control margin-bottom', placeholder: "メニューを入力しよう", required: ""  
           = f.label "内容"

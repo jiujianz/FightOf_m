@@ -33,9 +33,11 @@ class User < ApplicationRecord
   #   update_attribute(:remember_digest, nil)
   # end
 
-  has_secure_password validations: true
-
+  validates :name,
+    length: { minimum: 1, maximum: 50 }
   validates :email, presence: true, uniqueness: true
+  has_secure_password validations: true
+  
   has_many :messages
   has_many :tasks
 

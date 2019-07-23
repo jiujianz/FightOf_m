@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.where(user_id: current_user.id).order("created_at DESC")
+    @tasks = Task.where(user_id: current_user.id).sorted_desc
   end
 
   def new
@@ -39,16 +39,12 @@ class TasksController < ApplicationController
   def complete
     @task = Task.find(params[:id])
     @task.update_attribute(:completed_at, Time.now)
-    redirect_to tasks_path, notice: "Item successfully completed!"
+    redirect_to tasks_path, notice: "Trainig successfully completed!"
   end
 
   private
     def task_params
       params.require(:task).permit(:content, :description)
-    end
-
-    def find_task
-      @task = Task.find(params[:id])
     end
 
 end

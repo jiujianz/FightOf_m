@@ -24,10 +24,12 @@
                 .row.item
                   .col-md-8.col-sm-2
                     %h2.item-title{:style => "opacity: 0.5;"}
-                      %strike= link_to task.content, task
-                    %p.item-sub-title.item-desc{:style => "opacity: 0.5;"}= task.description
-                    %p.time-created-at.item-sub-title{:style => "opacity: 0.5;"}
-                      Completed #{time_ago_in_words(task.completed_at)} ago
+                      %strike
+                        = task.content
+                        %p.item-sub-title.item-desc{:style => "opacity: 0.5;"}
+                          = task.description
+                        %p.time-created-at.item-sub-title{:style => "opacity: 0.5;"}
+                          #{time_ago_in_words(task.completed_at)}前に完了しました
                   .col-md-2.col-xs-2
                     %p
                       = link_to complete_task_path(task), method: :patch do
@@ -39,10 +41,11 @@
               - else
                 .row.item
                   .col-md-6.col-sm-6.text-center
-                    %h2.item-title= task.content
+                    %h2.item-title
+                      = task.content
                     %p.item-sub-title.item-desc= task.description
                     %p.time-created-at.item-sub-title{:style => "opacity: 0.5;"}
-                      Created #{time_ago_in_words(task.created_at)} ago
+                      未完了  #{time_ago_in_words(task.created_at)}前に作成しました
                   .col-md-2.col-xs-2
                     %p
                       = link_to complete_task_path(task), method: :patch do
