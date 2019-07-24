@@ -4,6 +4,10 @@
   box-sizing:         border-box;
 }
 
+.login_text{
+  color: white;
+}
+
 /* sidebar */
 
 aside {
@@ -84,4 +88,27 @@ input, textarea, select, .uneditable-input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+.signup_video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+label{
+  color: white;
+}
+
+.session_label{
+  color: darkcyan;
+}
+
+.signup_btn{
+  position: initial;
+  margin-top: 7px;
 }

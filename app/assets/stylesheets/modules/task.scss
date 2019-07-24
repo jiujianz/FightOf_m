@@ -32,10 +32,10 @@
 
 a{
   position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
 }
 
 .botan{
@@ -81,7 +81,7 @@ a{
   height: 100px;
 }
 
-label{
+.task_label{
   color: darkcyan;
 }
 
@@ -112,4 +112,8 @@ label{
 
 .item:nth-child(n+1) {
 	padding-top: 1.5em;
+}
+
+.task_information{
+  color: white;
 }

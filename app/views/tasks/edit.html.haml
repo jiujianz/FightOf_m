@@ -6,9 +6,9 @@
     = form_with(model: @task, local: true) do |f|
       .row
         .form-group.task_form 
-          = f.label "メニュー"
+          = f.label "メニュー", class:"task_label"
           = f.text_field :content, class: 'form-control margin-bottom', placeholder: "変更メニューを入力しよう", required: ""  
-          = f.label "内容"
+          = f.label "内容", class:"task_label"
           = f.text_area :description, class: 'form-control margin-bottom description_from', placeholder: "変更内容を入力しよう", required: ""
         .form-group
           = f.submit '更新', class: 'col-sm-2 form__submit'

@@ -1,15 +1,16 @@
 - provide(:title, "Log in")
-%h1.text-center Log in
-.row
-  .col-md-6.col-md-offset-3
-    = form_for(:session, url: login_path) do |f|
-      = f.label :email
-      = f.email_field :email, class: 'form-control'
-      = f.label :password
-      = f.password_field :password, class: 'form-control'
-      -# = f.label :remember_me, class: "checkbox inline" do
-        -# = f.check_box :remember_me
-        -# %span Remember me on this computer
-      = f.submit "Log in", class: "btn btn-primary"
-    %p New user? 
-    = link_to "Sign up now!", signup_path
+.container
+  .row
+    %video.signup_video{autoplay: true, loop: true, muted: true, src:  "/assets/videos/Runner - 10809.mp4"}
+    .col-md-6.col-md-offset-3
+      %h1.login_text.text-center Log in
+      = form_for(:session, url: login_path) do |f|
+        = f.label :email
+        = f.email_field :email, class: 'form-control'
+        = f.label :password
+        = f.password_field :password, class: 'form-control'
+        -# = f.label :remember_me, class: "checkbox inline" do
+          -# = f.check_box :remember_me
+          -# %span Remember me on this computer
+        = f.submit "Log in", class: "btn btn-primary"
+        = link_to "アカウント作成", signup_path, class:"btn btn-success signup_btn"

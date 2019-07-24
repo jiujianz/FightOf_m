@@ -74,3 +74,4 @@ gem 'carrierwave'
 gem "mini_magick", ">= 4.9.4"
 gem 'simple_form', '~> 4.1'
 gem 'rails-i18n'
+gem 'dotenv-rails'
