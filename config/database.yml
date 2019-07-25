@@ -51,4 +51,5 @@ production:
   <<: *default
   database: FightOf_m_production
   username: FightOf_m
+  socket: /tmp/mysql.sock
   password: <%= ENV['FIGHTOF_M_DATABASE_PASSWORD'] %>
