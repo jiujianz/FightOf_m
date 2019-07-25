@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
-  socket: /var/lib/mysql/mysql.sock
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -52,5 +52,5 @@ production:
   database: FightOf_m_production
   # username: FightOf_m
   username: root
-  socket: /var/lib/mysql/mysql.sock
+  socket: /tmp/mysql.sock
   password: <%= ENV['FIGHTOF_M_DATABASE_PASSWORD'] %>
