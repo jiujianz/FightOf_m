@@ -50,7 +50,5 @@ test:
 production:
   <<: *default
   database: FightOf_m_production
-  # username: FightOf_m
-  username: root
-  socket: /tmp/mysql.sock
+  username: FightOf_m
   password: <%= ENV['FIGHTOF_M_DATABASE_PASSWORD'] %>
