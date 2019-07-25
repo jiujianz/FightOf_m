@@ -12,6 +12,7 @@ module FightOfM
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
     config.i18n.default_locale = :ja
+    config.assets.initialize_on_precompile = false
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
