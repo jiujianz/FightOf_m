@@ -23,7 +23,7 @@
       .col-12.col-sm-4
         .smoothscroll.navigation-slide-a
           .home-hover.navigation-slide
-            = link_to "", messages_path
+            = link_to "", messages_path, data: {"turbolinks"=>false}
             .home-icon
               = fa_icon 'users', class: "home_icon_link"
           %span Communication
@@ -39,7 +39,7 @@
       .col-12.col-sm-4
         .smoothscroll.navigation-slide-a
           .home-hover.navigation-slide
-            = link_to "", maps_path
+            = link_to "", maps_path, data: {"turbolinks"=>false}
             .home-icon
               = fa_icon 'search', class: "home_icon_link"
         %span Find your GYM

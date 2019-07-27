@@ -7,7 +7,7 @@
           = render @message_all
   %footer.message_form.col-xs-12
     .container.message_block
-      = form_with(model: @message, local: true) do |f|
+      = form_for [@message] do |f|
         .row
           .back_icon.col-xs-1
             = link_to root_path do

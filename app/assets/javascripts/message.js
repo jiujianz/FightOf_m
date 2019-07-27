@@ -1,17 +1,21 @@
 $(function() {
 	function buildMessageHTML(message){
-        var api_message = (message.image) ? `<img src="${message.image}" >` :``;
-        var api_message = (message.video) ? `<video src="${message.video}" >` :``;
+        var api_image = (message.image) ? `<img src="${message.image}" >` :``;
+        var api_video = (message.video) ? `<video src="${message.video}" >` :``;
 		var html = `
-                <div class= "message" data-id=${message.id}>
+                <div class= "message col-xs-12" data-id=${message.id}>
                   <div class= "upper-message">
                     <div class="upper-message__user-name">${message.user_name}
                     </div>
                     <div class= "upper-message__date">${message.time}
                     </div>
                   </div>
-                  <div class= "lower-message">${message.content}
-                    <p class= "lower-message__content">${api_message}
+                  <div class= "lower-message">
+                    <p class= "lower-message__content">${message.content}
+                    </p>
+                    <p class= "lower-message__image">${api_image}
+                    </p>
+                    <p class= "lower-message__image">${api_video}
                     </p>
                   </div>
                 </div>`
@@ -40,10 +44,10 @@ $(function() {
       });
     });
   }
-  
+
 	$('#new_message').on('submit', function(e){
     e.preventDefault();
-		var formData = new FormData(this);
+    var formData = new FormData(this);
     if ($('#message_content').val() !== ""){
       var href = window.location
       $.ajax({
@@ -58,26 +62,14 @@ $(function() {
         var html = buildMessageHTML(userSend_message);
         $('.messages').append(html)
         $('#message_content').val('')
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        $('.messages').animate({scrollTop: $('.messages').scrollTop}, 'fast');
       })
       .fail(function(){
         alert('error');
       })
       .always(() => {
-        $(".form__submit").removeAttr("disabled");
+        $(".chat__submit").removeAttr("disabled");
       });
     } 
   });
 })
-$('.form__submit').prop("disabled", true);
-  $('form__submit').change(function () {
-  if ($('form input:required').eq(e).val() === "") {
-    flag = false;
-  }
-  });
-  if (flag) {
-    $('.chat__submit').prop("disabled", false);
-  }
-  else {
-    $('.chat__submit').prop("disabled", true);
-  }
