@@ -11,12 +11,11 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    if @message.save
+    @message.save
       respond_to do |format|
         format.html { redirect_to messages_path  }
         format.json
       end
-    end
   end
 
   private

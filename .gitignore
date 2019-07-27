@@ -36,3 +36,4 @@ server.csr
 server.key
 server_key.pem
 config/credentials.yml.enc
+*.enc
