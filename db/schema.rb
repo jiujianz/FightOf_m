@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_07_22_115415) do
     t.string "remember_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin"
   end
 
 end

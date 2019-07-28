@@ -34,6 +34,7 @@ body {
 }
 .dropdown-menu{
   min-height: 40px;
+  height: fit-content;
 }
 
 .slide {
@@ -131,4 +132,16 @@ body {
 
 #home-row-2 span{
   color: white
+}
+
+.menu_homelist{
+  height: 25px;
+}
+
+.home_link{
+  height: 28px;
+}
+
+.edit_home{
+  color: black;
 }

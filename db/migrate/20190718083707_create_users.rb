@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string    :remember_digest
       t.datetime  :created_at
       t.datetime  :updated_at
+      t.boolean   :admin,                        defalt: false
 
       t.timestamps null: false
     end

@@ -1,4 +1,21 @@
 #navigation.navbar-fixed-top
+  %header.navbar.navbar-fixed-top.navbar-inverse
+    .container
+      %nav
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "YouTube", root_path
+          %li= link_to "Trany", users_path
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              Account
+              %b.caret
+            %ul.dropdown-menu
+              %li.menu_homelist
+                = link_to "Profile", current_user, class: "home_link"
+              %li.menu_homelist
+                = link_to "Settings", edit_user_path(current_user), class: "home_link"
+              %li.menu_homelist
+                = link_to "Log out", logout_path, method: :delete, class: "home_link"
   .container
     .dropdown.float-right
       .navigation_list.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
