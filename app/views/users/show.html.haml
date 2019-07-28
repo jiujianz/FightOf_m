@@ -1,0 +1,10 @@
+- provide(:title, @user.name)
+.row
+  %aside.col-md-4
+    %section.user_info
+      %h1
+        -# = gravatar_for @user
+        = @user.name
+        -# - if current_user.admin? && !current_user?(user)
+        = link_to "delete", @user, method: :delete, data: { confirm: "You sure?" }, class:"btn btn-danger signup_btn"
+
