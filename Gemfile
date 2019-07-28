@@ -71,7 +71,7 @@ gem "font-awesome-rails"
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'carrierwave'
-gem 'fog-aws'
+gem "aws-sdk-s3", require: false
 gem "mini_magick", ">= 4.9.4"
 gem 'simple_form', '~> 4.1'
 gem 'rails-i18n'
