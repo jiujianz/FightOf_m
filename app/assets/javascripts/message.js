@@ -62,7 +62,7 @@ $(function() {
         var html = buildMessageHTML(userSend_message);
         $('.messages').append(html)
         $('#message_content').val('')
-        $('.messages').animate({scrollTop: $('.messages').scrollTop}, 'fast');
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
       .fail(function(){
         alert('error');
