@@ -28,7 +28,7 @@
 /public/uploads
 app/views/layouts/application.html.haml
 config/certs/localhost.key
-.env.development
+.env
 config/certs/localhost.cert
 rand.dat
 server.crt

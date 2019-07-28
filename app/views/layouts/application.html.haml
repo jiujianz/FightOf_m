@@ -5,8 +5,10 @@
     %title FightOfM
     = csrf_meta_tags
     = csp_meta_tag
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
     %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap", :rel => "stylesheet"}/
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=ENV['GOOGLE_MAP_API']&libraries=places&callback=initMap"}
   %body
     = yield
