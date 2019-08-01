@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get    'login',   to: 'sessions#new'
   post   'login',   to: 'sessions#create'
   delete 'logout',  to: 'sessions#destroy'
-  resources :users
+  resources :users 
   resources :tasks do
     member do
       patch :complete
@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   end
   resources :messages, only: [:index, :create]
   resources :maps, only: [:index]
+  resources :movies, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

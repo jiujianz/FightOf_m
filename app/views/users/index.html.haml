@@ -1,7 +1,14 @@
 - provide(:title, 'All users')
-%h1.text-center All users
-%ul.users
-  - @user.each do |user|
-    %li
-      -# = gravatar_for user, size: 50
-      = link_to user.name, user
+%h1.text-center Work Out People
+.container
+  .row
+    -# = form_tag(search_users_path, method: 'get') do
+    -#   %input{name: "keyword", class: "search__query", placeholder: "ユーザーを検索", type: "text", value: ""}
+    -#   = submit_tag 'Search', name: nil
+    %ul.users
+      -# - @users.each do |user|
+      -#   %li.user_link
+      -#     = link_to user.name, user, class: "user"
+      = render @users
+
+

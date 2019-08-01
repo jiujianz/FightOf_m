@@ -3,27 +3,27 @@
     .container
       %nav
         %ul.nav.navbar-nav.navbar-right
-          %li= link_to "YouTube", root_path
-          %li= link_to "Trainy", users_path
+          -# %li= link_to "YouTube", movies_path
+          %li= link_to "Trainy", users_path, data: {"turbolinks"=>false}
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
               Account
               %b.caret
             %ul.dropdown-menu
               %li.menu_homelist
-                = link_to "Profile", current_user, class: "home_link"
+                = link_to "プロフィール", current_user, class: "account_link"
               %li.menu_homelist
-                = link_to "Settings", edit_user_path(current_user), class: "home_link"
+                = link_to "設定", edit_user_path(current_user), class: "account_link"
               %li.menu_homelist
-                = link_to "Log out", logout_path, method: :delete, class: "home_link"
-  .container
-    .dropdown.float-right
-      .navigation_list.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
-        = fa_icon "bars", class: "home_bar"
-        %span.caret
-      %ul.dropdown-menu
-        %li
-          = link_to "ログアウト", logout_path, method: :delete
+                = link_to "ログアウト", logout_path, method: :delete, class: "account_link"
+  -# .container
+  -#   .dropdown.float-right
+  -#     .navigation_list.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+  -#       = fa_icon "bars", class: "home_bar"
+  -#       %span.caret
+  -#     %ul.dropdown-menu
+  -#       %li
+  -#         = link_to "ログアウト", logout_path, method: :delete
 #intro.slide.story
   .container
     #home-row-1.row.clearfix
@@ -40,7 +40,7 @@
       .col-12.col-sm-4
         .smoothscroll.navigation-slide-a
           .home-hover.navigation-slide
-            = link_to "", messages_path, data: {"turbolinks"=>false}
+            = link_to "", messages_path, data: {"turbolinks"=>false}, class: "home_link"
             .home-icon
               = fa_icon 'users', class: "home_icon_link"
           %span Communication
@@ -48,7 +48,7 @@
       .col-12.col-sm-4
         .smoothscroll.navigation-slide-a
           .home-hover.navigation-slide
-            = link_to "", tasks_path
+            = link_to "", tasks_path, class: "home_link"
             .home-icon
               = fa_icon 'check-circle', class: "home_icon_link"
         %span Training To Do
@@ -56,7 +56,7 @@
       .col-12.col-sm-4
         .smoothscroll.navigation-slide-a
           .home-hover.navigation-slide
-            = link_to "", maps_path, data: {"turbolinks"=>false}
+            = link_to "", maps_path, data: {"turbolinks"=>false}, class: "home_link"
             .home-icon
               = fa_icon 'search', class: "home_icon_link"
         %span Find your GYM

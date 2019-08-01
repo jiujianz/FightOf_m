@@ -11,6 +11,6 @@
           = f.label "内容", class:"task_label"
           = f.text_area :description, class: 'form-control margin-bottom description_from', placeholder: "変更内容を入力しよう", required: ""
         .form-group
-          = f.submit '更新', class: 'col-sm-2 form__submit'
+          = f.submit '更新', class: 'col-sm-2 form__submit', class:"task_link"
         .btn.col-sm-2.botan
-          = link_to "戻る", tasks_path
+          = link_to "戻る", tasks_path, class:"task_link"
