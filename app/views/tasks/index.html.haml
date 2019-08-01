@@ -15,7 +15,7 @@
       .form-group
         -# = f.text_field :content, class: 'form-control col-sm-8 margin-bottom', placeholder: "メニューを入力しよう"
         .btn.col-sm-2.botan
-          = link_to '追加', new_task_path
+          = link_to '追加', new_task_path, class:"task_link"
       .container
         .col-md-6.col-md-offset-3.col-sm-6.text-center
           - @tasks.each do |task|

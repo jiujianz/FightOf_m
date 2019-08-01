@@ -111,6 +111,12 @@ label{
 .signup_btn{
   position: initial;
   margin-top: 7px;
+  width: 555px;
+}
+.signup_btn_login{
+  position: initial;
+  margin-top: 7px;
+  width: 705px;
 }
 
 /* Users index */
@@ -122,5 +128,7 @@ label{
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+    position: initial;
+    color: black;
   }
 }
