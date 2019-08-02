@@ -8,6 +8,9 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.datetime  :created_at
       t.datetime  :updated_at
       t.boolean   :admin,                        defalt: false
+      t.string    :activation_digest
+      t.boolean   :activated,                    defalt: false
+      t.datetime  :activated_at
 
       t.timestamps null: false
     end
