@@ -42,6 +42,7 @@ class User < ApplicationRecord
 
   def activate
     update_columns((activated: FILL_IN, activated_at: FILL_IN)
+  end
 
   def activated
     update_attribute(:activated, true)
