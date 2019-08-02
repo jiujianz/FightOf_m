@@ -4,12 +4,11 @@ class UsersController < ApplicationController
   before_action :admin_user, only: [:destoroy]
 
   def index
-    @users = User.where(activated: FILL_IN)
+    @users = User.all
   end
 
   def show
     @user = User.find(params[:id])
-    redirect_to root_url and return unless FILL_IN
   end
 
   def new
